@@ -1,10 +1,12 @@
 import asyncio
 from os import getenv
-from state import user_langs
+
 from aiogram import Bot, Dispatcher
+from dotenv import load_dotenv
+
 from commands import router as commands_router
 from handlears import router as handlears_router
-from dotenv import load_dotenv
+
 load_dotenv()
 
 TOKEN = getenv("TOKEN")

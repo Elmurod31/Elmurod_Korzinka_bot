@@ -40,6 +40,10 @@ async def til_bosilganda(callback_query: types.CallbackQuery):
 async def command_card_handler(message: Message):
     lang = user_langs.get(message.from_user.id, "uz")
     img_path = os.path.join(os.path.dirname(__file__), "images", "img_1.png")
+    if lang =="ru":
+        img_path = img_path = os.path.join(os.path.dirname(__file__), "images", "img_8.png")
+    elif lang =="en":
+        img_path = img_path = os.path.join(os.path.dirname(__file__), "images", "img_9.png")
     img = FSInputFile(img_path)
     await message.answer_photo(photo=img, caption=t("card_caption", lang))
 
@@ -51,6 +55,10 @@ async def command_card_handler(message: Message):
 async def command_end_handler(message: Message):
     lang = user_langs.get(message.from_user.id, "uz")
     img_path = os.path.join(os.path.dirname(__file__), "images", "img_4.png")
+    if lang =="ru":
+        img_path = img_path = os.path.join(os.path.dirname(__file__), "images", "img_10.png")
+    elif lang =="en":
+        img_path = img_path = os.path.join(os.path.dirname(__file__), "images", "img_11.png")
     img = FSInputFile(img_path)
     await message.answer_photo(photo=img, caption=t("cheap_program_caption", lang))
 
@@ -61,6 +69,10 @@ async def command_end_handler(message: Message):
 async def command_end_handler(message: Message):
     lang = user_langs.get(message.from_user.id, "uz")
     img_path = os.path.join(os.path.dirname(__file__), "images", "img_5.png")
+    if lang =="ru":
+        img_path = img_path = os.path.join(os.path.dirname(__file__), "images", "img_12.png")
+    elif lang =="en":
+        img_path = img_path = os.path.join(os.path.dirname(__file__), "images", "img_13.png")
     img = FSInputFile(img_path)
     await message.answer_photo(photo=img, caption=t("discounts_caption", lang))
 
@@ -72,6 +84,10 @@ async def command_end_handler(message: Message):
 async def command_end_handler(message: Message):
     lang = user_langs.get(message.from_user.id, "uz")
     img_path = os.path.join(os.path.dirname(__file__), "images", "img_6.png")
+    if lang =="ru":
+        img_path = img_path = os.path.join(os.path.dirname(__file__), "images", "img_14.png")
+    elif lang =="en":
+        img_path = img_path = os.path.join(os.path.dirname(__file__), "images", "img_15.png")
     img = FSInputFile(img_path)
     await message.answer_photo(photo=img, caption=t("gifts_caption", lang))
 
@@ -79,6 +95,7 @@ async def command_end_handler(message: Message):
 @router.message(F.text.in_([
     "Filiallar 🏘", "Филиалы 🏘", "Branches 🏘",
 ]))
+
 async def command_end_handler(message: Message):
     lang = user_langs.get(message.from_user.id, "uz")
     img_path = os.path.join(os.path.dirname(__file__), "images", "img_7.png")
