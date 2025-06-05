@@ -1,6 +1,6 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, KeyboardButton, WebAppInfo
 
-web_app = WebAppInfo(url="https://github.com/Elmurod31/Elmurod_Korzinka_bot")
+web_app = WebAppInfo(url="https://elmurod31.github.io/Elmurod_Korzinka_bot/")
 korzinka_btn = InlineKeyboardMarkup(inline_keyboard=[
             [InlineKeyboardButton(text="O'zbek tili 🇺🇿", callback_data="lang_uz")],
             [InlineKeyboardButton(text="Rus tili 🇷🇺", callback_data="lang_ru")],
