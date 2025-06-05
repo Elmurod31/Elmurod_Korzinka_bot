@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="bg-light">
+
+
+<div class="container-fluid mt-3">
+
+
+<div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="d-flex flex-column" style="height: 75vh;">
+        <img src="img_3.png" class="img-fluid w-100 h-75 flex-grow-1 object-fit-cover" alt="...">
+        <div class="bg-dark text-white text-center py-2">
+          <h1 class="m-0 fs-4">Shaurma</h1>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="d-flex flex-column" style="height: 75vh;">
+        <img src="img_13.png" class="img-fluid w-100 h-75 flex-grow-1 object-fit-cover" alt="...">
+        <div class="bg-dark text-white text-center py-2">
+          <h1 class="m-0 fs-4">Burger</h1>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="d-flex flex-column" style="height: 75vh;">
+        <img src="img_20.png" class="img-fluid w-100 h-75 flex-grow-1 object-fit-cover" alt="...">
+        <div class="bg-dark text-white text-center py-2">
+          <h1 class="m-0 fs-4">Hot dog</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+    <div class="row g-3">
+        <div class="col-12 bg-white d-flex">
+            <p class="text-center text-black p-3 m-0"><a class="nav-link" href="#scrollspyHeading1">Shaurma</a></p>
+
+            <p class="text-center text-black p-3 m-0"><a class="nav-link" href="#scrollspyHeading2">Burger</a></p>
+
+            <p class="text-center text-black p-3 m-0"><a class="nav-link" href="#scrollspyHeading3">Hot dog</a></p>
+        </div>
+    </div>
+
+    <div id="scrollspyHeading1" class="row g-3 mt-5">
+        <div class="col-6">
+            <img src="img_3.png" class="img-fluid w-100 h-50 bg-white" alt="">
+            <h5 class="bg-white text-center m-0">Shaurma</h5>
+            <h5 class="bg-white text-center m-0 pt-3">32 000 so'm</h5>
+            <div class="bg-white text-center p-3 rounded-bottom" data-name="Shaurma" data-price="32000">
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="decrement(this)">-</button>
+                <span class="px-3 fw-bold" id="count">0</span>
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="increment(this)">+</button>
+            </div>
+        </div>
+        <div class="col-6">
+            <img src="img_9.png" class="img-fluid w-100 h-50 bg-white" alt="">
+            <h5 class="bg-white text-center m-0">Shaurma</h5>
+            <h5 class="bg-white text-center m-0 pt-3">29 000 so'm</h5>
+            <div class="bg-white text-center p-3 rounded-bottom" data-name="Shaurma" data-price="29000">
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="decrement(this)">-</button>
+                <span class="px-3 fw-bold" id="count1">0</span>
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="increment(this)">+</button>
+            </div>
+        </div>
+        <div class="col-6">
+            <img src="img_10.png" class="img-fluid w-100 h-50 bg-white" alt="">
+            <h5 class="bg-white text-center m-0">Shaurma</h5>
+            <h5 class="bg-white text-center m-0 pt-3">29 000 so'm</h5>
+            <div class="bg-white text-center p-3 rounded-bottom" data-name="Shaurma" data-price="28000">
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="decrement(this)">-</button>
+                <span class="px-3 fw-bold" id="count2">0</span>
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="increment(this)">+</button>
+            </div>
+        </div>
+        <div class="col-6">
+            <img src="img_11.png" class="img-fluid w-100 h-50 bg-white" alt="">
+            <h5 class="bg-white text-center m-0">Shaurma</h5>
+            <h5 class="bg-white text-center m-0 pt-3">29 000 so'm</h5>
+            <div class="bg-white text-center p-3 rounded-bottom" data-name="Shaurma" data-price="27000">
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="decrement(this)">-</button>
+                <span class="px-3 fw-bold" id="count3">0</span>
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="increment(this)">+</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="scrollspyHeading2" class="row g-3 mt-3">
+        <div class="col-6">
+            <img src="img_12.png" class="img-fluid w-100 h-50 bg-white" alt="">
+            <h5 class="bg-white text-center m-0">Burger</h5>
+            <h5 class="bg-white text-center m-0 pt-3">27 000 so'm</h5>
+            <div class="bg-white text-center p-3 rounded-bottom" data-name="Burger 🍔" data-price="27000">
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="decrement(this)">-</button>
+                <span class="px-3 fw-bold" id="count4">0</span>
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="increment(this)">+</button>
+            </div>
+        </div>
+        <div class="col-6">
+            <img src="img_13.png" class="img-fluid w-100 h-50 bg-white " alt="">
+            <h5 class="bg-white text-center m-0">Burger</h5>
+            <h5 class="bg-white text-center m-0 pt-3">20 000 so'm</h5>
+            <div class="bg-white text-center p-3 rounded-bottom" data-name="Burger 🍔" data-price="20000">
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="decrement(this)">-</button>
+                <span class="px-3 fw-bold" id="count5">0</span>
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="increment(this)">+</button>
+            </div>
+        </div>
+        <div class="col-6">
+            <img src="img_5.png" class="img-fluid w-100 h-50 bg-white " alt="">
+            <h5 class="bg-white text-center m-0">Burger</h5>
+            <h5 class="bg-white text-center m-0 pt-3">20 000 so'm</h5>
+            <div class="bg-white text-center p-3 rounded-bottom" data-name="Burger 🍔" data-price="19000">
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="decrement(this)">-</button>
+                <span class="px-3 fw-bold" id="count6">0</span>
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="increment(this)">+</button>
+            </div>
+        </div>
+        <div class="col-6">
+            <img src="img_14.png" class="img-fluid w-100 h-50 bg-white " alt="">
+            <h5 class="bg-white text-center m-0">Burger</h5>
+            <h5 class="bg-white text-center m-0 pt-3">20 000 so'm</h5>
+            <div class="bg-white text-center p-3 rounded-bottom" data-name="Burger 🍔" data-price="18000">
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="decrement(this)">-</button>
+                <span class="px-3 fw-bold" id="count7">0</span>
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="increment(this)">+</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="scrollspyHeading3" class="row g-3 mt-3">
+        <div class="col-6">
+            <img src="img_7.png" class="img-fluid w-100 h-50 bg-white " alt="">
+            <h5 class="bg-white text-center m-0">Hot dog</h5>
+            <h5 class="bg-white text-center m-0 pt-3">19 000 so'm</h5>
+            <div class="bg-white text-center p-3 rounded-bottom" data-name="Hot dog 🌭" data-price="19000">
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="decrement(this)">-</button>
+                <span class="px-3 fw-bold" id="count8">0</span>
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="increment(this)">+</button>
+            </div>
+        </div>
+        <div class="col-6">
+            <img src="img_17.png" class="img-fluid w-100 h-50 bg-white " alt="">
+            <h5 class="bg-white text-center m-0">Hot dog</h5>
+            <h5 class="bg-white text-center m-0 pt-3">11 000 so'm</h5>
+            <div class="bg-white text-center p-3 rounded-bottom" data-name="Hot dog 🌭" data-price="11000">
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="decrement(this)">-</button>
+                <span class="px-3 fw-bold" id="count9">0</span>
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="increment(this)">+</button>
+            </div>
+        </div>
+        <div class="col-6">
+            <img src="img_16.png" class="img-fluid w-100 h-50 bg-white " alt="">
+            <h5 class="bg-white text-center m-0">Hot dog</h5>
+            <h5 class="bg-white text-center m-0 pt-3">11 000 so'm</h5>
+            <div class="bg-white text-center p-3 rounded-bottom" data-name="Hot dog 🌭" data-price="12000">
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="decrement(this)">-</button>
+                <span class="px-3 fw-bold" id="count10">0</span>
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="increment(this)">+</button>
+            </div>
+        </div>
+        <div class="col-6">
+            <img src="img_15.png" class="img-fluid w-100 h-50 bg-white " alt="">
+            <h5 class="bg-white text-center m-0">Hot dog</h5>
+            <h5 class="bg-white text-center m-0 pt-3">11 000 so'm</h5>
+            <div class="bg-white text-center p-3 rounded-bottom" data-name="Hot dog 🌭" data-price="13000">
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="decrement(this)">-</button>
+                <span class="px-3 fw-bold" id="count11">0</span>
+                <button class="btn btn-light rounded-pill px-2 py-2" onclick="increment(this)">+</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div id="cartBar"
+             class="col-12 bg-white d-flex justify-content-between align-items-center position-fixed bottom-0 start-0 end-0 p-3 shadow d-none">
+            <h3 class="text-black m-0">Savatni ko'rish</h3>
+            <a href="index1.html">
+                <button class="box p-2"><h5 class="m-0" id="card">Savatchani ko'rish</h5></button>
+            </a>
+        </div>
+    </div>
+
+
+</div>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+<script>
+    let tg = window.Telegram.WebApp;
+    tg.expand(); // Telegram oynasini to'liq ochish
+
+    function updateMainButton() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || {};
+        if (Object.keys(cart).length === 0) {
+            tg.MainButton.hide();
+        } else {
+            tg.MainButton.setText("Buyurtmani yuborish");
+            tg.MainButton.show();
+        }
+    }
+
+    function increment(button) {
+        const countSpan = button.previousElementSibling;
+        let count = parseInt(countSpan.textContent) + 1;
+        countSpan.textContent = count;
+
+        const productDiv = button.closest("div[data-name]");
+        const name = productDiv.getAttribute("data-name");
+        const price = productDiv.getAttribute("data-price");
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || {};
+
+        if (cart[name]) {
+            cart[name].count += 1;
+        } else {
+            cart[name] = {
+                price: price,
+                count: 1
+            };
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateMainButton();
+    }
+
+    function decrement(button) {
+        const countSpan = button.nextElementSibling;
+        let count = parseInt(countSpan.textContent);
+        if (count === 0) return;
+
+        countSpan.textContent = count - 1;
+
+        const productDiv = button.closest("div[data-name]");
+        const name = productDiv.getAttribute("data-name");
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || {};
+
+        if (cart[name]) {
+            cart[name].count -= 1;
+            if (cart[name].count <= 0) {
+                delete cart[name];
+            }
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateMainButton();
+    }
+
+    // Telegram MainButton bosilganda: JSON qilib yuborish
+    tg.MainButton.onClick(() => {
+        const cart = JSON.parse(localStorage.getItem("cart")) || {};
+        const items = Object.entries(cart).map(([name, data]) => ({
+            name: name,
+            price: data.price,
+            count: data.count
+        }));
+
+        tg.sendData(JSON.stringify(items)); // JSON ko‘rinishida botga yuborish
+
+        // Storage tozalash
+        localStorage.removeItem("cart");
+
+        // UI tozalash
+        document.querySelectorAll(".counter span").forEach(span => {
+            span.textContent = "0";
+        });
+
+        updateMainButton();
+    });
+
+    updateMainButton(); // sahifa ochilganda tekshirish
+</script>
+</body>
+</html>
