@@ -12,7 +12,7 @@ load_dotenv()
 
 TOKEN = getenv("TOKEN")
 bot = Bot(token=TOKEN, session=session)
-bot = Bot(token=TOKEN)
+# bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
 
@@ -21,7 +21,6 @@ dp.include_router(handlears_router)
 
 
 async def main() -> None:
-    # bot = Bot(token=TOKEN)
     await dp.start_polling(bot)
 
 
