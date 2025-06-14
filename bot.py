@@ -8,14 +8,14 @@ from dotenv import load_dotenv
 
 from commands import router as commands_router
 from handlears import router as handlears_router
-# from aiogram.client.session.aiohttp import AiohttpSession
-# session = AiohttpSession(proxy="http://proxy.server:3128")
+from aiogram.client.session.aiohttp import AiohttpSession
+session = AiohttpSession(proxy="http://proxy.server:3128")
 load_dotenv()
 
 TOKEN = getenv("TOKEN")
 CLICK = getenv("CLICK")
-# bot = Bot(token=TOKEN, session=session)
-bot = Bot(token=TOKEN)
+bot = Bot(token=TOKEN, session=session)
+# bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
 @dp.message(F.func(lambda msg: msg.web_app_data if msg.web_app_data else None))
