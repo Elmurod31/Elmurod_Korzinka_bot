@@ -3,7 +3,7 @@ import os
 from aiogram import F, Router, types
 from aiogram.types import Message, FSInputFile
 
-from keyboard import korzinka_btn2, korzinka_btn2_ru, korzinka_btn2_en
+from keyboard import korzinka_btn2, korzinka_btn2_ru, korzinka_btn2_en, korzinka_btn
 from lang_texts import t
 from state import user_langs
 
@@ -31,7 +31,26 @@ async def til_bosilganda(callback_query: types.CallbackQuery):
     await callback_query.message.answer("Til tanlandi ✅", reply_markup=reply_kb)
     await callback_query.answer()
 
+    @router.message(F.text.in_([
+        "O'zbek tili 🇺🇿",
+        "Rus tili 🇷🇺",
+        "Ingliz 🇬🇧"
+    ]))
+    async def change_language_reply(message: Message):
+        user_id = message.from_user.id
 
+        if message.text == "Rus tili 🇷🇺":
+            lang_code = "ru"
+            reply_kb = korzinka_btn2_ru
+        elif message.text == "Ingliz 🇬🇧":
+            lang_code = "en"
+            reply_kb = korzinka_btn2_en
+        else:
+            lang_code = "uz"
+            reply_kb = korzinka_btn2
+
+        user_langs[user_id] = lang_code
+        await message.answer("Til tanlandi ✅", reply_markup=reply_kb)
 
 
 @router.message(F.text.in_([
@@ -105,3 +124,16 @@ async def command_end_handler(message: Message):
     latitude = 41.319593583706656
     longitude = 69.27619793880801
     await message.answer_location(latitude, longitude)
+
+@router.message(F.text == "🔁 Tilni o‘zgartirish")
+async def tilni_ozgartirish(message: Message):
+    await message.answer("Tilni tanlang:", reply_markup=korzinka_btn)
+
+
+@router.message(F.text == "🔁 Изменить язык")
+async def tilni_ozgartirish(message: Message):
+    await message.answer("Tilni tanlang:", reply_markup=korzinka_btn)
+
+@router.message(F.text == "🔁 Select language")
+async def tilni_ozgartirish(message: Message):
+    await message.answer("Tilni tanlang:", reply_markup=korzinka_btn)
