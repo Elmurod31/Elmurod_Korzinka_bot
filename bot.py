@@ -6,6 +6,7 @@ from aiogram import Bot, Dispatcher, F
 from aiogram.types import PreCheckoutQuery, Message, LabeledPrice
 from dotenv import load_dotenv
 
+from bot_menu import set_bot_menu
 from commands import router as commands_router
 from handlears import router as handlears_router
 from aiogram.client.session.aiohttp import AiohttpSession
@@ -53,6 +54,7 @@ dp.include_router(handlears_router)
 
 async def main() -> None:
     await dp.start_polling(bot)
+    await set_bot_menu(bot)
 
 
 if __name__ == "__main__":
