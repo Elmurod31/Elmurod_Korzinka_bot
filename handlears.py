@@ -34,7 +34,7 @@ async def til_bosilganda(callback_query: types.CallbackQuery):
     @router.message(F.text.in_([
         "O'zbek tili 🇺🇿",
         "Rus tili 🇷🇺",
-        "Ingliz 🇬🇧"
+        "English 🇬🇧"
     ]))
     async def change_language_reply(message: Message):
         user_id = message.from_user.id
@@ -42,7 +42,7 @@ async def til_bosilganda(callback_query: types.CallbackQuery):
         if message.text == "Rus tili 🇷🇺":
             lang_code = "ru"
             reply_kb = korzinka_btn2_ru
-        elif message.text == "Ingliz 🇬🇧":
+        elif message.text == "English 🇬🇧":
             lang_code = "en"
             reply_kb = korzinka_btn2_en
         else:
