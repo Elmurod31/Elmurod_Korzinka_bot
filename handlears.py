@@ -98,7 +98,7 @@ async def command_end_handler(message: Message):
 
 
 @router.message(F.text.in_([
-    "Harid qilish uchun so'vg'alar 🔱", "Подарки за покупки 🔱", "Gifts for Shopping 🔱"
+    "Haridingiz uchun sovg'alar 🔱", "Подарки за покупки 🔱", "Gifts for Shopping 🔱"
 ]))
 async def command_end_handler(message: Message):
     lang = user_langs.get(message.from_user.id, "uz")
