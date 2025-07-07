@@ -54,7 +54,7 @@ async def til_bosilganda(callback_query: types.CallbackQuery):
 
 
 @router.message(F.text.in_([
-    "Korzinka kartasi 💳", "Карта Korzinka 💳", "Korzinka Card 💳"
+    "Korzinka kartasi 💳", "Карта Карзинка 💳", "Korzinka Card 💳"
 ]))
 async def command_card_handler(message: Message):
     lang = user_langs.get(message.from_user.id, "uz")
